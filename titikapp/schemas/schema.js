@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import post from "./post";
 import user from "./user";
 import postedBy from "./postedBy";
+import comment from "./comment";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -14,9 +15,10 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
+    comment,
     post,
     user,
-    post,
+
     postedBy,
     /* Your types here! */
   ]),
